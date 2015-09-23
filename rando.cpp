@@ -1,4 +1,5 @@
 #include "rando.h"
+#include <cmath>
 //#include <stdlib.h>
 
 
@@ -38,5 +39,9 @@ bool Rando::isPrime(int num)
 **/
 int Rando::nearestToZero(int a, int b)
 {
-    return 0;
+    if (a == 0 && b == 0) { return 0; }
+    else if (a == 0) { return b; }
+    else if (b == 0) { return a; }
+    else if (std::abs(a) < std::abs(b)) { return a; }
+    else { return b; }
 }
