@@ -23,6 +23,7 @@ class RandoTest : public ::testing::Test
         virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
+// shouldWorry tests
 TEST(RandoTest, ChildrenSmile111) {
     Rando rando;
     ASSERT_TRUE( rando.shouldWorry(true ,true ,true ) );
@@ -57,6 +58,7 @@ TEST(RandoTest, ChildrenSmile000) {
     ASSERT_FALSE(rando.shouldWorry(false,false,false) );
 }
 
+// nearestToZero tests
 TEST(RandoTest, nearestToZeroX00) {
     Rando rando;
     ASSERT_TRUE( rando.nearestToZero(0,0) == 0 );
